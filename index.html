@@ -13,7 +13,20 @@
                     extend: {
                         colors: {
                             main: '#2D1A18',
-                            secondary: '#9B4517',
+                            maindarker: '#57250A',
+                            secondary: {
+                                50: '#fdf9ed',
+                                100: '#f9eccc',
+                                200: '#f3d894',
+                                300: '#ecbf5d',
+                                400: '#e8a737',
+                                500: '#e08920',
+                                600: '#c66719',
+                                700: '#9b4517',
+                                800: '#863a1a',
+                                900: '#6f3118',
+                                950: '#3f1709',
+                            },
                             black: '#131313',
                         },
                         fontFamily: {
@@ -33,12 +46,9 @@
         <!-- NAVIGATION BAR START -->
         <nav class="bg-black fixed w-full z-20 top-0 left-0">
             <div
-                class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 sm:px-16"
+                class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-8 py-4 sm:px-16"
             >
-                <a
-                    href="https://flowbite.com/"
-                    class="flex items-center font-playfair"
-                >
+                <a href="#" class="flex items-center font-playfair">
                     <span
                         class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
                         >KafeLate</span
@@ -47,7 +57,7 @@
                 <div class="flex md:order-2">
                     <button
                         type="button"
-                        class="text-white bg-secondary font-playfair rounded-md font-medium text-sm px-4 py-2 text-center mr-3 md:mr-0"
+                        class="text-white bg-secondary-700 transition duration-500 hover:bg-secondary-900 ease-out font-poppins rounded-md font-medium text-sm px-4 py-2 text-center mr-3 md:mr-0"
                     >
                         Beli Sekarang
                     </button>
@@ -58,7 +68,6 @@
                         aria-controls="navbar-sticky"
                         aria-expanded="false"
                     >
-                        <span class="sr-only">Open main menu</span>
                         <svg
                             class="w-5 h-5"
                             aria-hidden="true"
@@ -94,7 +103,7 @@
                                     Beranda
                                 </div>
                                 <div
-                                    class="nav-line w-5 h-1 group-hover:w-7 transition duration-500 bg-stone-500 md:group-hover:bg-stone-500 rounded-full hidden md:block"
+                                    class="w-5 h-1 group-hover:w-7 transition-all duration-500 bg-stone-500 md:group-hover:bg-stone-500 rounded-full hidden md:block"
                                 ></div>
                             </a>
                         </li>
@@ -109,7 +118,7 @@
                                     Menu
                                 </div>
                                 <div
-                                    class="nav-line w-2 h-1 group-hover:w-7 transition duration-500 bg-white md:group-hover:bg-stone-500 rounded-full hidden md:block"
+                                    class="nav-line w-2 h-1 group-hover:w-7 transition-all duration-500 bg-white md:group-hover:bg-stone-500 rounded-full hidden md:block"
                                 ></div>
                             </a>
                         </li>
@@ -124,7 +133,7 @@
                                     Ulasan
                                 </div>
                                 <div
-                                    class="nav-line w-2 h-1 group-hover:w-7 transition duration-500 bg-white md:group-hover:bg-stone-500 rounded-full hidden md:block"
+                                    class="nav-line w-2 h-1 group-hover:w-7 transition-all duration-500 bg-white md:group-hover:bg-stone-500 rounded-full hidden md:block"
                                 ></div>
                             </a>
                         </li>
@@ -133,5 +142,45 @@
             </div>
         </nav>
         <!-- NAVIGATION BAR END -->
+        <div class="flex flex-col pt-16">
+            <div class="flex flex-col p-16 relative">
+                <div class="flex flex-col max-w-[500px]">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold text-center md:text-left font-playfair"
+                    >
+                        Nikmati momen Anda bersama KafeLate.
+                    </h2>
+                </div>
+                <div>
+                    <p
+                        class="text-center md:text-left text-lg mt-5 font-normal max-w-[600px]"
+                    >
+                        Kami memberikan jenis biji kopi terbaik yang telah
+                        diseleksi secara ketat. Bijih kopi kami impor dari
+                        negara Guatemala, Colombia, Costa Rica, The Arabian
+                        Penisula, Ethiopia, dan Jamaica.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row mt-10 gap-4">
+                    <button
+                        type="button"
+                        class="text-white bg-secondary-700 transition duration-500 hover:bg-secondary-900 ease-out font-poppins rounded-md font-medium text-sm px-4 py-4 md:py-2 text-center md:mr-0"
+                    >
+                        Beli Sekarang
+                    </button>
+                    <button
+                        type="button"
+                        class="text-white border border-white font-poppins rounded-md font-medium text-sm px-4 py-4 md:py-2 text-center md:mr-0"
+                    >
+                        Reservasi
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col p-16">
+                <div class="text-2xl font-playfair font-bold text-center">
+                    <span class="text-secondary-300">Pilihan</span> Kami
+                </div>
+            </div>
+        </div>
     </body>
 </html>
