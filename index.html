@@ -7,40 +7,7 @@
         <link rel="stylesheet" href="styles/style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            main: '#2D1A18',
-                            maindarker: '#57250A',
-                            secondary: {
-                                50: '#fdf9ed',
-                                100: '#f9eccc',
-                                200: '#f3d894',
-                                300: '#ecbf5d',
-                                400: '#e8a737',
-                                500: '#e08920',
-                                600: '#c66719',
-                                700: '#9b4517',
-                                800: '#863a1a',
-                                900: '#6f3118',
-                                950: '#3f1709',
-                            },
-                            black: '#131313',
-                        },
-                        fontFamily: {
-                            poppins: ['Poppins', 'Arial', 'sans-serif'],
-                            playfair: [
-                                'Playfair Display',
-                                'Arial',
-                                'sans-serif',
-                            ],
-                        },
-                    },
-                },
-            };
-        </script>
+        <script src="tailwind.js"></script>
     </head>
     <body class="flex flex-col bg-main text-white">
         <!-- NAVIGATION BAR START -->
@@ -109,7 +76,7 @@
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="./menu.html"
                                 class="group flex flex-col gap-2 justify-center items-center md:border-none border border-white"
                             >
                                 <div
@@ -142,6 +109,7 @@
             </div>
         </nav>
         <!-- NAVIGATION BAR END -->
+
         <div class="flex flex-col pt-16">
             <div class="flex flex-col p-16 relative">
                 <div class="flex flex-col max-w-[500px]">
@@ -178,94 +146,149 @@
             </div>
             <div class="flex flex-col p-16">
                 <div class="text-3xl font-playfair font-bold text-center">
-                    <span class="text-secondary-300">Pilihan</span> Kami
+                    <span class="text-secondary-300">Rekomendasi</span> Kami
                 </div>
-                <div
-                    class="flex flex-col md:flex-row mt-5 gap-5 justify-center items-center"
-                >
-                    <!-- Chevron Sementara -->
+
+                <div class="flex mt-5 gap-2 justify-center items-center">
+                    <button
+                        id="scrollLeftBtn"
+                        class="p-4 w-fit h-fit rounded-full bg-secondary-300 text-white font-bold hidden md:block"
+                    ></button>
                     <div
-                        class="w-14 h-14 bg-amber-800 rounded-full hidden md:block"
+                        id="choice"
+                        class="flex flex-col w-full whitespace-nowrap md:flex-row mt-5 gap-5 items-center flex-no-wrap overflow-hidden scrolling-touch"
                     >
-                        <div
-                            class="w-14 h-14 text-4xl origin-top-left text-center align-middle text-white"
-                        >
-                            <
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="shadow bg-black">
-                        <div class="md:w-64 md:h-64 bg-gray-500">
-                            <img
-                                class="object-cover w-full h-full"
-                                src="/asset/img/background.jpg"
-                                alt=""
-                            />
-                        </div>
-                        <div class="p-4">
-                            <h5
-                                class="text-xl font-playfair font-bold tracking-tight text-white"
-                            >
-                                Arabica Coffee
-                            </h5>
-                            <p
-                                class="mt-2 text-lg font-bold text-secondary-400"
-                            >
-                                Rp15.000
-                            </p>
-                        </div>
-                    </div>
-                    <div class="shadow bg-black">
-                        <div class="md:w-64 md:h-64 bg-gray-500">
-                            <img
-                                class="object-cover w-full h-full"
-                                src="/asset/img/background.jpg"
-                                alt=""
-                            />
-                        </div>
-                        <div class="p-4">
-                            <h5
-                                class="text-xl font-playfair font-bold tracking-tight text-white"
-                            >
-                                Arabica Coffee
-                            </h5>
-                            <p
-                                class="mt-2 text-lg font-bold text-secondary-400"
-                            >
-                                Rp15.000
-                            </p>
-                        </div>
-                    </div>
-                    <div class="shadow bg-black">
-                        <div class="md:w-64 md:h-64 bg-gray-500">
-                            <img
-                                class="object-cover w-full h-full"
-                                src="/asset/img/background.jpg"
-                                alt=""
-                            />
-                        </div>
-                        <div class="p-4">
-                            <h5
-                                class="text-xl font-playfair font-bold tracking-tight text-white"
-                            >
-                                Arabica Coffee
-                            </h5>
-                            <p
-                                class="mt-2 text-lg font-bold text-secondary-400"
-                            >
-                                Rp15.000
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Chevron Sementara -->
-                    <div
-                        class="w-14 h-14 bg-amber-800 rounded-full hidden md:block"
-                    >
-                        <div
-                            class="w-14 h-14 text-4xl origin-top-left text-center align-middle text-white"
-                        >
-                            >
-                        </div>
-                    </div>
+                    <button
+                        id="scrollRightBtn"
+                        class="p-4 w-fit h-fit rounded-full bg-secondary-300 text-white font-bold hidden md:block"
+                    ></button>
                 </div>
             </div>
             <div class="flex flex-col p-16 px-4 md:px-16">
@@ -305,6 +328,153 @@
                             Beli Sekarang
                         </button>
                     </div>
+                </div>
+            </div>
+            <div class="flex flex-col p-16">
+                <div class="text-3xl font-playfair font-bold text-center">
+                    <span class="text-secondary-300">Best Selller</span> Kami
+                </div>
+
+                <div class="flex mt-5 gap-2 justify-center items-center">
+                    <button
+                        id="scrollLeftBtn"
+                        class="p-4 w-fit h-fit rounded-full bg-secondary-300 text-white font-bold hidden md:block"
+                    ></button>
+                    <div
+                        id="choice"
+                        class="flex flex-col w-full whitespace-nowrap md:flex-row mt-5 gap-5 items-center flex-no-wrap overflow-hidden scrolling-touch"
+                    >
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        id="scrollRightBtn"
+                        class="p-4 w-fit h-fit rounded-full bg-secondary-300 text-white font-bold hidden md:block"
+                    ></button>
                 </div>
             </div>
             <div class="flex flex-col p-16 px-4 md:px-16">
@@ -348,6 +518,181 @@
                     </div>
                 </div>
             </div>
+            <div class="flex flex-col p-16">
+                <div class="text-3xl font-playfair font-bold text-center">
+                    Paket <span class="text-secondary-300">Hemat</span>
+                </div>
+
+                <div class="flex mt-5 gap-2 justify-center items-center">
+                    <button
+                        id="scrollLeftBtn"
+                        class="p-4 w-fit h-fit rounded-full bg-secondary-300 text-white font-bold hidden md:block"
+                    ></button>
+                    <div
+                        id="choice"
+                        class="flex flex-col w-full whitespace-nowrap md:flex-row mt-5 gap-5 items-center flex-no-wrap overflow-hidden scrolling-touch"
+                    >
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shadow bg-black card">
+                            <div class="md:w-64 md:h-64 bg-gray-500">
+                                <img
+                                    class="object-cover w-full h-full"
+                                    src="/asset/img/background.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="p-4">
+                                <h5
+                                    class="text-xl font-playfair font-bold tracking-tight text-white"
+                                >
+                                    Arabica Coffee
+                                </h5>
+                                <p
+                                    class="mt-2 text-lg font-bold text-secondary-400"
+                                >
+                                    Rp15.000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        id="scrollRightBtn"
+                        class="p-4 w-fit h-fit rounded-full bg-secondary-300 text-white font-bold hidden md:block"
+                    ></button>
+                </div>
+            </div>
         </div>
     </body>
+    <script>
+        const cardsContainer = document.getElementById('choice');
+        const cards = document.querySelectorAll('.card');
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 20;
+
+        let scrollLeft = cardWidth + gap;
+
+        document
+            .getElementById('scrollLeftBtn')
+            .addEventListener('click', () => {
+                scrollLeft -= cardWidth + gap;
+                cardsContainer.scrollTo({
+                    left: scrollLeft,
+                    behavior: 'smooth',
+                });
+            });
+
+        document
+            .getElementById('scrollRightBtn')
+            .addEventListener('click', () => {
+                scrollLeft += cardWidth + gap;
+                cardsContainer.scrollTo({
+                    left: scrollLeft,
+                    behavior: 'smooth',
+                });
+            });
+    </script>
 </html>
